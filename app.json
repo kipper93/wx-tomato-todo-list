@@ -1,0 +1,49 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/home/home",
+        "pages/location/index",
+        "pages/memorialDay/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#000000",
+        "selectedColor": "#FA7556",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "iconPath": "/assets/images/home/cat.png",
+                "selectedIconPath": "/assets/images/home/cat_check.png",
+                "text": ""
+            },
+            {
+                "pagePath": "pages/location/index",
+                "iconPath": "/assets/images/home/earth.png",
+                "selectedIconPath": "/assets/images/home/earth_check.png",
+                "text": ""
+            },
+            {
+                "pagePath": "pages/memorialDay/index",
+                "iconPath": "/assets/images/home/dog.png",
+                "selectedIconPath": "/assets/images/home/dog_check.png",
+                "text": ""
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "resolveAlias": {
+        "~/*": "/*"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    }
+}

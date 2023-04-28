@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+        "van-calendar": "@vant/weapp/calendar/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "home-list": "../../components/homeList/index",
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-rate": "@vant/weapp/rate/index"
+    },
+    "navigationBarTitleText": "tomato",
+    "enablePullDownRefresh": true
+}

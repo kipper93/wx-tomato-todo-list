@@ -1,0 +1,22 @@
+<view class="content"  catchtap="openAddDialog"   bindlongpress='longPress' >
+    <van-rate value="{{ listData.icon_state }}" size="{{ 10}}" class="content_icon" icon="like" readonly void-icon="like-o" color="#ee0a24" void-color="#eee" />
+    <image class="list_img" src="{{listData.url}}" mode=""/>
+    <!-- <van-icon bindtap="changeIcon" data-id="{{listData.id}}" class="content_icon" color="{{ listData.icon_state === 1 ? '#F5F5F7' : '#F2918A' }}" name="like" /> -->
+  
+    <view class="content_body">
+        <view class="content_title">
+            {{listData.head}}
+        </view>
+        <view class="content_desc">
+            {{listData.text}}
+        </view>
+        <view class="content_user flex_box">
+            <view>
+                {{listData.name}}
+            </view>
+            <view>
+                {{listData.time}}
+            </view>
+        </view>
+    </view>
+</view>

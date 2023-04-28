@@ -1,0 +1,89 @@
+/* pages/home/home.wxss */
+.page{
+    background-color: #f7f7f7;
+    height: calc(100vh - 20rpx);
+    padding: 10rpx;
+}
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #aaa;
+  }
+  
+  .userinfo-avatar {
+    overflow: hidden;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+  /* 日历 */
+.calendar_lmy {
+    --calendar-height: 460rpx;
+
+}
+.calendar_lmy .van-calendar {
+    height:320rpx !important;
+    border-radius: 20rpx;
+    background: linear-gradient(180deg, #F2918A, #ffffff);
+}
+
+.calendar_lmy .van-calendar__day {
+    height: 60rpx !important;
+
+}
+.calendar_lmy .van-calendar .van-calendar__header{
+      display: none !important;
+}
+
+/* 背景图改变 */
+.calendar_lmy .van-calendar .van-calendar__day--selected .van-calendar__selected-day {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADyklEQVR4nO2XTVIaaxSG38NPW5cMwl3BJSuQrEBYwSUTtO4kZAXiACuzi7MUDCQrACe3lEnYQdoVyA7EHXgHoIL0yXu6odO0BE3SViZ5qrqkm+Z87/n9PgW/mN8CHhUwe79X8ubePl+sKORKRK+h2OZPXYUWBDIC0gdO+7/h9HC3LtCX2Vb/CE9EeK1Fm7X8dDzp8oU/U4JOptUf8HGICdO5dwykPgLesaRTb7y59kCctJTkw+kIT4D2H2KLz8aTzxA5cVpnHT5ay/SwOpRUqq5zFEwEzZ1ANJ8CBkvBFhUo/l5GiY9WEF4PmDaqF+aZ0z7t6fu9wszzdpxW/4RfrTBt7NUo963TPitPG7sdWhtB5RrQIp/Vp41/isC9q4wgVIpb7bMKYgivFQJDmueCNTOgmA+Yd5debDvt/mu+sgLFuhTbM7EgFr3p+GZIw8cKHKTSUrNUMY1Hy6hE4Xtf8b2de8Psi1wBhGm4BDJlfuT68wE9KCCGLTibTFx62KXXH/mIoiwyXpd1UbbFKdCPJtYgvEKY054Co61Wv2mRUFa8k8t1WIwXgsybdTk0TAS97rED/uKiB9kPp67ZguIt6+hgUx2tCLhrVC+dF7nX0uxd+wYgQ1XdEZHzTUaWLDqjyd9dMhrvFpHg7+QTgCEL8TzuRCjA8g257zH3Rd766ZjO1WX+r5fPnspdY3dkubdIWHRm49uKildgmmoCaUbTEQoI1GuFyuu8/SnuD6sVT2Wftsq+gMnNv0xHXoHyUhgWhALuDqtNEMs/EsDvDpFBNvdHLyhSaJbDKj6gnk1A4LktHHSHFTWgO+ywstUYX/EJBdjEosh8UgIMX8R4MuAyKmk5Uk+LqiixnSv82icUYDXAWV6PfpkUZjvoDmwr5Dy6RiggqHrv81a7/4q3z4IJiTspvELY+0Nophbv1aSwlNhQizopvEKsDlitBRZNnbfPArtDuaeE64YfDFPIohmxXYrxdkmKjQIMf3yKV+L0qyFhgjpTlzVQwIIHAoygFlKd6MhMAps1XLAQdY73D1mmgltxKamCNJtWgA636Gh61wowbHOyM4AgXUlCBHfaT9yIruIF/k0Bhong1uLyQFH/mXRwDHcZg1csvhJibBRgWOgWM/0iy3EaDd9jWNHN5trlJL7K5nL16B6w5FEBS/zusMOFSBeaPtmUFn9hT/eh+o7vNzcdZp4swAiicVPjpxo3lZcCGfHA4mKBpyjyT1EE/9N0z7bidV5H+S4BUUzM/e1t0f4nsNOOaGokaYwyPFN+T5p+WEBS/HIBXwCSEhc//L9XVAAAAABJRU5ErkJggg==');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60rpx 60rpx;
+}
+.van-calendar__month-title{
+    display: none !important;
+}
+.addIcon {
+    font-size: 60rpx;
+    position: fixed;
+    z-index: 999;
+    bottom: 160rpx;
+    right: 40rpx;
+}
+.home_box{
+    display: flex;
+    justify-content: space-between;
+    gap: 24rpx;
+    padding: 20rpx;
+    flex-wrap: wrap;
+}
+.content_body {
+    margin-bottom: 80rpx;
+}
+.add_dialog {
+    padding: 20rpx;
+}
+
+/*  */
+.flex_between_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex_left, .flex_right {
+    font-size: 24rpx !important;
+    display: inline-block !important;
+}
+.flex_left {
+    width: 140rpx !important;
+}
+.flex_right {
+    flex: 1;
+}

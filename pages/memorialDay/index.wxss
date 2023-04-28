@@ -1,0 +1,53 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+/* .swiper{
+    background-color: pink;
+} */
+
+.page-section-spacing{
+    margin-top: 60rpx;
+  }
+  .scroll-view_H{
+    white-space: nowrap;
+  }
+  .scroll-view-item{
+    height: 100rpx;
+  }
+  .scroll-view-item_H{
+      margin-left: 20rpx;
+    display: inline-block;
+    width: 50%;
+    height: 100rpx;
+    background-color: red;
+    text-align: center;
+  }
+
+  .birthday_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+    font-size: 24rpx;
+  }
+  .birthday_name{
+    display: flex;
+    align-items: center;
+  }
+  .birthday_name image{
+    width: 48rpx;
+    height: 48rpx;
+  }
+  swiper{
+    height: 600rpx;
+  }
+.swiper-item {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

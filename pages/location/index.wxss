@@ -1,0 +1,9 @@
+/* pages/location/index.wxss */
+
+page{
+    height: 60vh;
+}
+.location {
+    padding: 20rpx;
+    font-size: 24rpx;
+}
