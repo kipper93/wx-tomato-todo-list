@@ -1,26 +1,33 @@
-<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{background}}" wx:key="index">
-    <swiper-item>
-      <image  class="swiper-item swiper_img" src="{{item.src}}"></image>
-    </swiper-item>
-  </block>
-</swiper>
+<view class="content">
+    <swiper class="swiper" loop="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="index">
+            <swiper-item>
+                <image class="swiper-item swiper_img" src="{{item.url}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
 
+    <view class="birthday_list" wx:for="{{memorialList}}" wx:key="index">
+        <view class="birthday_name">
+            {{item.name}} <image src=" {{item.icon === 1 ? '/assets/images/home/coke.png' : '/assets/images/home/memorial.png'}}"></image>
+        </view>
+        <view class="birthday_date">
+            {{item.date}}
+        </view>
 
+        <view wx:if="{{item.icon === 1}}" class="birthday_day">
+            {{  item.age}}
+        </view>
+        <view wx:else class="birthday_day">
+        {{ item.day}}
+        </view>
+    </view>
 
-<!-- <view class="page-section-spacing">
-  <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-    <view id="demo1" class="scroll-view-item_H demo-text-1">1</view>
-    <view id="demo2" class="scroll-view-item_H demo-text-2">2</view>
-    <view id="demo3" class="scroll-view-item_H demo-text-3">3</view>
-  </scroll-view>
-</view> -->
-
-<view class="birthday_list" wx:for="{{memorialList}}" wx:key="index">
-  <view class="birthday_name">
-    {{item.name}} <image src=" {{item.icon === 1 ? '/assets/images/home/coke.png' : '/assets/images/home/memorial.png'}}"></image>
-  </view>
-  <view class="birthday_date">
-    {{item.date}}
-  </view>
+    <view class="text_btn">
+        <view class="countdown">记忆日2024-10-11 00:00:00 </view>
+        <view class="time">
+            <text>距离下次见面还有😊</text>
+            <text>{{ countdown_time }}</text>
+        </view>
+    </view>
 </view>

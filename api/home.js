@@ -7,7 +7,7 @@ export const homeList = async (params) => {
 
 // home更新
 export const updateHomeList = async (params) => {
-    return await request('post', `/update-home`, params);
+    return await request('post', `/add_home`, params);
 }
 
 

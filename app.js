@@ -12,10 +12,35 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+    wx.setInnerAudioOption({
+        mixWithOther: true,
+   
+        obeyMuteSwitch: false,
+   
+        success: function (e) {
+   
+          console.log(e)
+   
+          console.log('play success')
+   
+        },
+   
+        fail: function (e) {
+   
+          console.log(e)
+   
+          console.log('play fail')
+   
+        }
+   
+      })
   },
   globalData: {
     userInfo: null,
-    ip:"http://"+"192.168.120.36"+":8022",
-    wsip:"ws://"+"192.168.120.36"+":8022"
+    ip:"http://"+"8.139.6.250"+":8000",
+    // wsip:"ws://"+"8.139.6.250"+":8000"
+    // ip:"http://"+"127.0.0.1"+":8000",
+    // wsip:"ws://"+"127.0.0.1"+":8000"
   }
 })

@@ -5,10 +5,11 @@ const FORM = 'FORM';
 const DELETE = 'DELETE';
 const PATCH = 'PATCH';
 
-// 本地1
-export const baseURL = 'http://192.168.120.36:8022';
-
-// export const baseURL = 'https://wsxk.care4u.cn/tomato';
+// 本地调试
+// export const baseURL = 'http://127.0.0.1:8000';
+// 阿里云
+// export const baseURL = 'http://www.nikkiyo.shop';
+export const baseURL = 'http://8.139.6.250:8000';
 
 const request = async (method, url, data, type = 'application/json') => {
   return new Promise(function (resolve, reject) {

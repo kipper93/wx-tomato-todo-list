@@ -5,10 +5,16 @@
         "pages/location/index",
         "pages/memorialDay/index"
     ],
+    "subpackages": [{
+        "root": "package",
+        "pages": [
+            "pages/detail/index"
+        ]
+    }],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
+        "navigationBarTitleText": "🧑‍🎄",
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
@@ -16,8 +22,7 @@
         "selectedColor": "#FA7556",
         "borderStyle": "black",
         "backgroundColor": "#ffffff",
-        "list": [
-            {
+        "list": [{
                 "pagePath": "pages/home/home",
                 "iconPath": "/assets/images/home/cat.png",
                 "selectedIconPath": "/assets/images/home/cat_check.png",
@@ -45,5 +50,9 @@
         "scope.userLocation": {
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
         }
-    }
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "requiredPrivateInfos": [
+        "getLocation"
+    ]
 }

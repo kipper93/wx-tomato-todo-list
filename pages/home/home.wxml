@@ -1,34 +1,36 @@
 <!--pages/home/home.wxml-->
 <view class="page">
     <block>
-      <view  class="flex_between_header">
-        <!-- <view style="display: inline-block;">
+        <view class="flex_between_header">
+            <!-- <view style="display: inline-block;">
             <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
             <text class="userinfo-nickname">{{userInfo.nickName}}</text>
         </view> -->
 
-        <van-calendar poppable="{{false}}" show-confirm="{{false}}" class="calendar_lmy" default-date="{{defaultDate}}" />
-      </view>
+            <van-calendar poppable="{{false}}" show-confirm="{{false}}" class="calendar_lmy" default-date="{{defaultDate}}" />
+        </view>
 
     </block>
     <!-- 列表 -->
     <view class="home_box">
-        <home-list bindtap="detail" wx:for="{{ listData }}" bind:openAddDialog="openAddDialog" wx:key="index" listData="{{item}}"></home-list>
+        <home-list wx:for="{{ listData }}" bind:openDetail="openDetail" wx:key="index" listData="{{item}}"></home-list>
     </view>
     <!-- 添加按钮 -->
-    <van-icon name="add-o" class="addIcon" color="#F2918A" bindtap="openAddDialog" />
-    <!-- <van-icon name="add-o" class="addIcon" color="#F2918A" bindtap="detail" /> -->
+    <van-icon name="add-o" class="addIcon" color="#ffffff" bindtap="openAddDialog" />
     <!-- 添加弹窗 -->
     <van-dialog use-slot title="新增" show="{{ listDialogShow }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose" bind:confirm="dialogConfirm">
         <view class="add_dialog">
-            <van-uploader file-list="{{ fileList }}"  max-count="1" upload-text="选择照片" bind:before-read="beforeRead" bind:after-read="afterRead" />
+            <image class="upload-photo" wx:if="{{ photoList === null}}" src="../../assets/images/home/camera.png" mode="" bindtap="choosePhoto" />
+            <!-- 注意bindtap 和 catchtap的区别，catchtap可以阻止事件冒泡-->
+            <image style="width: 80px; height: 80px;" referrerPolicy="no-referrer" wx:if="{{ photoList !== null}}" src="{{ photoList}}" />
+
             <view>
                 <view class="flex_between_header">
                     <view class="flex_left">
                         标题:
                     </view>
                     <view class="flex_right">
-                        <van-field class="add_dialog_message" value="{{ head }}" data-type="head" bind:change="onChange"  placeholder="lalala" autosize border="{{ false }}">
+                        <van-field required class="add_dialog_message" value="{{ title }}" data-type="title" bind:change="onChange" placeholder="lalala" autosize border="{{ false }}">
                         </van-field>
                     </view>
                 </view>
@@ -37,7 +39,7 @@
                         说点啥:
                     </view>
                     <view class="flex_right">
-                        <van-field class="add_dialog_message" value="{{ text }}"  data-type="text" bind:change="onChange"  placeholder="说点想说的" autosize border="{{ false }}">
+                        <van-field required class="add_dialog_message" value="{{ text }}" data-type="text" bind:change="onChange" placeholder="说点想说的" autosize border="{{ false }}">
                         </van-field>
                     </view>
                 </view>
@@ -47,12 +49,9 @@
                     </view>
                     <view class="flex_right">
                         <van-rate value="{{ icon_state }}" size="{{ 25 }}" icon="like" void-icon="like-o" color="#ee0a24" void-color="#eee" bind:change="onChangeRate" />
-
                     </view>
                 </view>
             </view>
         </view>
-
     </van-dialog>
-
 </view>

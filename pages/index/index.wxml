@@ -1,18 +1,21 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <!-- <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block> -->
-    <block>
-      <!-- <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 点击进入 </button> -->
-      <!-- <button class="openTomato" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Welcome tomato </button> -->
-      
-      <van-icon size="60" color="yellow" name="smile-comment-o" bindtap="getUserInfo" />
 
-    </block>
-  </view>
+<view class="snow-container">
+    <view class="snow foreground"></view>
+    <view class="snow foreground layer"></view>
+    <!--延迟衔接-->
+    <view class="snow medium"></view>
+    <view class="snow medium layer"></view>
+    <view class="snow background"></view>
+    <view class="snow background layer"></view>
+
+    <image wx:if="{{musicState}}" class="music_top" src="../../assets/images/home/music.png" bindtap="getMusic" mode="" />
+    <image wx:if="{{!musicState}}" class="music_top_stop" src="../../assets/images/home/failure-sum.png" bindtap="stopMusic" mode="" />
+    <image class="right" src="../../assets/images/home/right.png" bindtap="getUserProfile" mode="" />
+    <view class="userinfo">
+        <van-icon size="60" color="yellow" name="smile-comment-o" bindtap="getUserProfile" />
+        <view class="code">
+            小番茄圣诞节快乐！
+        </view>
+    </view>
 </view>

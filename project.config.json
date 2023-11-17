@@ -24,7 +24,7 @@
         "packNpmManually": false,
         "enableEngineNative": false,
         "packNpmRelationList": [],
-        "minifyWXSS": true,
+        "minifyWXSS": false,
         "showES6CompileOption": false,
         "minifyWXML": true,
         "babelSetting": {
@@ -33,7 +33,8 @@
             "outputPath": ""
         },
         "ignoreDevUnusedFiles": false,
-        "ignoreUploadUnusedFiles": true
+        "ignoreUploadUnusedFiles": true,
+        "condition": false
     },
     "compileType": "miniprogram",
     "condition": {},

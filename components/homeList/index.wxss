@@ -1,6 +1,6 @@
 .content {
   width: 300rpx;
-  height: 340rpx;
+  height: 314rpx;
   padding: 16rpx;
   border-radius: 20rpx;
   background: linear-gradient(90deg, #26C9CA, #17D99F);
@@ -27,6 +27,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  height: 34rpx;
+  overflow: hidden;
 }
 
 .content_desc {
@@ -35,9 +37,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  height: 56rpx;
+  height: 28rpx;
 }
 
 .content_user {

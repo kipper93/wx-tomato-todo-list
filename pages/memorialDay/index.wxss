@@ -1,3 +1,11 @@
+.content{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background:repeating-linear-gradient(to right,rgb(229, 230, 218),rgb(228, 219, 219));
+}
+
 .log-list {
   display: flex;
   flex-direction: column;
@@ -6,10 +14,6 @@
 .log-item {
   margin: 10rpx;
 }
-/* .swiper{
-    background-color: pink;
-} */
-
 .page-section-spacing{
     margin-top: 60rpx;
   }
@@ -32,12 +36,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20rpx;
+    padding: 14rpx;
     font-size: 24rpx;
+    color:orangered;
   }
   .birthday_name{
     display: flex;
     align-items: center;
+    color:orangered;
+    width:30%;
+  }
+  .birthday_date{
+    width:30%;
+  }
+  .birthday_day{
+    width:24%;
   }
   .birthday_name image{
     width: 48rpx;
@@ -47,7 +60,18 @@
     height: 600rpx;
   }
 .swiper-item {
-  width: 100%;
   height: 100%;
+  width:100%;
   object-fit: contain;
+}
+.text_btn{
+    color: red;
+    font-size: 20rpx;
+    padding: 16rpx;
+    
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+
 }
