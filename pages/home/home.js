@@ -3,6 +3,7 @@ import {
     homeList,
     updateHomeList
 } from '../../api/home'
+import  { formatting,day,getWeek }  from '../../utils/utils'
 var app = getApp();
 Page({
     data: {
@@ -62,7 +63,8 @@ Page({
         let that = this
         wx.chooseMedia({
             count: 1,
-            mediaType: 'image',
+            mediaType: ['image'],
+            sourceType: ['album'], 
             success(res) {
                 let {
                     tempFiles
@@ -82,25 +84,14 @@ Page({
             fileList: [],
             text: '',
             title: '',
+            title: '',
+            photoList: null
         })
     },
     onChange(event) {
         this.setData({
             [event.currentTarget.dataset.type]: event.detail
         })
-    },
-    repair0(m) {
-        return m < 10 ? '0' + m : m
-    },
-    formatting(time) {
-        var time = new Date(time);
-        var y = time.getFullYear();
-        var m = time.getMonth() + 1;
-        var d = time.getDate();
-        var h = time.getHours();
-        var mm = time.getMinutes();
-        var s = time.getSeconds();
-        return y + '-' + this.repair0(m) + '-' + this.repair0(d) + ' ' + this.repair0(h) + ':' + this.repair0(mm) + ':' + this.repair0(s);
     },
     dialogConfirm() {
         const {
@@ -113,19 +104,23 @@ Page({
             let params = {
                 name: app?.globalData?.userInfo?.nickName || 'Yep',
                 icon_state,
-                time: this.formatting(new Date()),
+                time: formatting(new Date()),
                 url: `${photoList}`,
                 title,
                 text,
-                avatarUrl: app?.globalData?.userInfo?.avatarUrl  
+                avatarUrl: app?.globalData?.userInfo?.avatarUrl,
+                week: getWeek(day(new Date()))
             }
+
             let data = updateHomeList(params);
+            console.log(data,'---');
             this.setData({
                 listData: data,
                 listDialogShow: false,
                 photoList: null,
                 text: '',
                 title: '',
+                week: ''
             })
             this.getList()
         }
@@ -138,12 +133,12 @@ Page({
     async getList() {
         let data = await homeList()
         data.map((item) => {
-            item.date = this.formatting(new Date(item.date).getTime())
+            item.date = formatting(new Date(item.date).getTime())
+            item.week = getWeek(day(new Date(item.date).getTime()))
         })
         this.setData({
             listData: data
         })
-
     },
     onLoad() {
         this.getList()

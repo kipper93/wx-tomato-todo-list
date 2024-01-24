@@ -11,3 +11,7 @@
     font-size: 24rpx;
     color: orangered;
 }
+.leftl{
+    margin-left: 10rpx;
+    margin-bottom: 20rpx;
+}

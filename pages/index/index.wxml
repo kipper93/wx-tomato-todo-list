@@ -1,5 +1,4 @@
 <!--index.wxml-->
-
 <view class="snow-container">
     <view class="snow foreground"></view>
     <view class="snow foreground layer"></view>
@@ -11,7 +10,14 @@
 
     <image wx:if="{{musicState}}" class="music_top" src="../../assets/images/home/music.png" bindtap="getMusic" mode="" />
     <image wx:if="{{!musicState}}" class="music_top_stop" src="../../assets/images/home/failure-sum.png" bindtap="stopMusic" mode="" />
-    <image class="right" src="../../assets/images/home/right.png" bindtap="getUserProfile" mode="" />
+    
+
+    <button open-type="getUserInfo"bindgetuserinfo="onGetuserinfo">
+        <image class="right" src="../../assets/images/home/right.png" bindtap="getUserProfile" mode="" />
+    </button>
+
+
+
     <view class="userinfo">
         <van-icon size="60" color="yellow" name="smile-comment-o" bindtap="getUserProfile" />
         <view class="code">

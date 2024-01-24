@@ -1,0 +1,35 @@
+/* package/pages/back/index.wxss */
+
+.box{
+    padding: 12rpx;
+}
+.back_btn{
+    margin-bottom: 10rpx;
+}
+.back_box {
+    display: flex;
+    justify-content: space-between;
+    gap: 24rpx;
+    padding: 20rpx;
+    flex-wrap: wrap;
+    height: 640rpx;
+    overflow: auto;
+
+}
+
+.back_img {
+    width: 30%;
+    height: 200rpx;    
+    object-fit: cover;
+    border:1px solid rgb(219, 45, 45);
+    border-radius: 10px;
+    background-color: rgb(226, 61, 61);
+}
+.video_item{
+    height: 700rpx;  
+}
+.swiper_video{
+    height: 700rpx;
+    width: 100%;  
+
+}

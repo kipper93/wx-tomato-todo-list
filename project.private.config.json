@@ -11,6 +11,20 @@
             "list": [
                 {
                     "name": "",
+                    "pathName": "package/pages/detail/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/home/home",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
                     "pathName": "pages/home/home",
                     "query": "",
                     "launchMode": "default",

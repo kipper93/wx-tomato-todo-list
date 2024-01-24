@@ -5,12 +5,15 @@
         "pages/location/index",
         "pages/memorialDay/index"
     ],
-    "subpackages": [{
-        "root": "package",
-        "pages": [
-            "pages/detail/index"
-        ]
-    }],
+    "subpackages": [
+        {
+            "root": "package",
+            "pages": [
+                "pages/detail/index",
+                "pages/back/index"
+            ]
+        }
+    ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
@@ -22,7 +25,8 @@
         "selectedColor": "#FA7556",
         "borderStyle": "black",
         "backgroundColor": "#ffffff",
-        "list": [{
+        "list": [
+            {
                 "pagePath": "pages/home/home",
                 "iconPath": "/assets/images/home/cat.png",
                 "selectedIconPath": "/assets/images/home/cat_check.png",

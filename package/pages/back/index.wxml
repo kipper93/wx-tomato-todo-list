@@ -1,0 +1,21 @@
+<!--package/pages/back/index.wxml-->
+<view class="box">
+    <van-tag plain class="back_btn" type="warning">一些偷拍你的视频</van-tag>
+
+    <swiper class="swiper video_item" loop="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{backgroundVideo}}" wx:key="index">
+            <swiper-item>
+                <video class="swiper-item swiper_video" src="{{item.url}}" controls="true" objectFit="cover"></video>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <van-tag plain class="back_btn" type="warning">一些你的背影</van-tag>
+    <view  class="back_box">
+        <image wx:for="{{list}}" class="back_img" wx:key="index" src="{{item.url}}" data-url="{{item.url}}"  mode="aspectFit" bindtap="previewImage" />
+    </view>
+
+    
+    
+
+</view>

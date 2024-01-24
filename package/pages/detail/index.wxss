@@ -21,7 +21,7 @@
 .list_img {
   width: 100%;
   /* height: 300rpx; */
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .content_icon {

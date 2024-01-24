@@ -2,7 +2,7 @@
     <view class="content" data-listData="{{listData}}" >
 <image class="avatarUrlCircle" src="{{listData.avatarUrl}}" mode=""/>
     <van-rate value="{{ listData.icon_state }}" size="{{ 10}}" class="content_icon" icon="like" readonly void-icon="like-o" color="#ee0a24" void-color="#eee" />
-    <image class="list_img" src="{{listData.image_url}} " mode=""> </image>
+    <image class="list_img" src="{{listData.image_url}}" bind:tap="previewImage" data-url="{{listData.image_url}}" mode=""> </image>
   
     <view class="content_body">
         <view class="content_title">
@@ -17,6 +17,7 @@
             </view>
             <view>
                 {{listData.date}}
+                
             </view>
         </view>
     </view>

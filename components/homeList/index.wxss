@@ -1,52 +1,58 @@
 .content {
-  width: 300rpx;
-  height: 314rpx;
-  padding: 16rpx;
-  border-radius: 20rpx;
-  background: linear-gradient(90deg, #26C9CA, #17D99F);
-  position: relative;
-  color: white;
-  font-weight: bold;
+    width: 300rpx;
+    height: 314rpx;
+    padding: 16rpx;
+    border-radius: 20rpx;
+    background: linear-gradient(90deg, #26C9CA, #17D99F);
+    position: relative;
+    color: white;
+    font-weight: bold;
 }
 
 .list_img {
-  width: 300rpx;
-  height: 200rpx;
-  object-fit: cover;
+    width: 300rpx;
+    height: 200rpx;
+    object-fit: cover;
+}
+
+.week {
+    margin-left: 30rpx;
+    color: tomato;
+    font-weight: 700;
 }
 
 .content_icon {
-  position: absolute;
-  top: 20rpx;
-  right: 20rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
 }
 
 .content_title {
-  font-size: 24rpx;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  height: 34rpx;
-  overflow: hidden;
+    font-size: 24rpx;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    height: 34rpx;
+    overflow: hidden;
 }
 
 .content_desc {
-  margin-top: 10rpx;
-  font-size: 20rpx;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  height: 28rpx;
+    margin-top: 10rpx;
+    font-size: 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    height: 28rpx;
 }
 
 .content_user {
-  font-size: 18rpx;
+    font-size: 18rpx;
 }
 
 .flex_box {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }

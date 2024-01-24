@@ -44,5 +44,16 @@ Page({
             arrowLine: true, //线内箭头
         }]
 
-    }
+    },
+
+    openBack() {
+        wx.navigateTo({
+            url: `/package/pages/back/index`,
+        })
+    },
+    openUser() {
+        wx.navigateTo({
+            url: `/package/pages/back/index`,
+        })
+    },
 })

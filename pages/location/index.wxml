@@ -1,8 +1,12 @@
 <!--pages/location/index.wxml-->
 <view class="content">
     <view class="location">
-    谢谢98年的小严在2021年遇到93年的我
-</view>
+    感谢缘分在2021年让98年的小严与93年的小刘相遇
+    
+    </view>
+    <!-- <van-button type="warning" size="small" class="leftl" bind:tap="openUser" >查看访客</van-button> -->
+    <van-button type="warning" size="small" class="leftl" bind:tap="openBack" >偷拍女明星</van-button>
+    <!-- <van-button type="warning"size="small" class="leftl" >未完待续</van-button> -->
     <view class="page" hover-class="none" hover-stop-propagation="false" style="width: 100%; height: 100%;">
 <map id="map" longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" polyline="{{polyline}}" scale="4" 
   style="width: 100%; height: 100%;"></map>
