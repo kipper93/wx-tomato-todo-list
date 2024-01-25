@@ -1,0 +1,31 @@
+/* pages/scratch/scratch.wxss */
+.box {
+    width: 600rpx;
+    height: 600rpx;
+    position: relative;
+    margin: 0 auto;
+}
+
+.box image,
+.box canvas,
+.gj_btn {
+    width: 87%;
+    height: 87%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 7%;
+}
+
+.gj_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+}
+
+.gj_btn button {
+    box-sizing: border-box;
+    background: none;
+    border: rgba(0, 0, 0, 0) solid 1px;
+}

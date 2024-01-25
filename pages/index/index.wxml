@@ -11,17 +11,19 @@
     <image wx:if="{{musicState}}" class="music_top" src="../../assets/images/home/music.png" bindtap="getMusic" mode="" />
     <image wx:if="{{!musicState}}" class="music_top_stop" src="../../assets/images/home/failure-sum.png" bindtap="stopMusic" mode="" />
     
+    <view class="scratch_top" bindtap="scratchTop">
+        <image src="../../assets/images/hongbao_1.png" mode=""/>
+    </view>
 
     <button open-type="getUserInfo"bindgetuserinfo="onGetuserinfo">
         <image class="right" src="../../assets/images/home/right.png" bindtap="getUserProfile" mode="" />
     </button>
 
 
-
     <view class="userinfo">
-        <van-icon size="60" color="yellow" name="smile-comment-o" bindtap="getUserProfile" />
+        <van-icon size="60" color="tomato" name="smile-comment-o" bindtap="getUserProfile" />
         <view class="code">
-            小番茄圣诞节快乐！
+            小番茄新年快乐！
         </view>
     </view>
 </view>

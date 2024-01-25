@@ -10,7 +10,8 @@
             "root": "package",
             "pages": [
                 "pages/detail/index",
-                "pages/back/index"
+                "pages/back/index",
+                "pages/scratchCard/index"
             ]
         }
     ],

@@ -1,0 +1,14 @@
+<view class="box">
+	<image class="image" src='{{resaultSrc}}'></image>
+	<canvas disable-scroll ="false"
+		  canvas-id='canvas-demo' 
+		  bindtouchstart="touchStart" 
+		  bindtouchmove="touchMove" 
+		  bindtouchend="touchEnd">
+	</canvas>
+	<cover-view wx:if="{{showGjBth}}" class="gj_btn" bindtap="gj">
+		<button>点击刮奖</button>
+	</cover-view>
+</view>
+<text  wx:if="{{again}}" style="margin: 50rpx;">抽奖结果：{{ randomPrize }}--找小刘进行兑换</text>
+<button wx:if="{{again}}" style="margin: 50rpx;" bindtap="gj">再刮一次</button>

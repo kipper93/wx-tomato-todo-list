@@ -16,4 +16,9 @@ export const editHomeList = async (params) => {
     return await request('post', `/edit-home`, params);
 }
 
+// home更新
+export const scratchList = async (params) => {
+    return await request('post', `/add_scratch`, params);
+}
+
 

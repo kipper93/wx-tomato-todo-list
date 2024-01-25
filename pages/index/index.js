@@ -13,7 +13,7 @@ Page({
             id: 1,
             title: "christmas is all around",
             singer: 'Billy Mack',
-            src: 'http://music.163.com/song/media/outer/url?id=5051107.mp3',
+            src: 'https://lu-sycdn.kuwo.cn/8d6c11e609044a7b9d9198bf714fa18b/65b1c053/resource/n1/12/47/1164744599.mp3?from=vip',
             converImgUrl: '../images/yhm.png'
         }],
         musicState: true
@@ -22,6 +22,11 @@ Page({
     bindViewTap() {
         wx.switchTab({
             url: '../list/list'
+        })
+    },
+    scratchTop() {
+        wx.navigateTo({
+            url: '/package/pages/scratchCard/index'
         })
     },
     onLoad() {
